@@ -1,5 +1,5 @@
 # Cosmetics
-### **To DO** :star:
+### **To DO** 🌟
 
 - [ ] Database Storage.
 - [ ] BaseCommands.

@@ -9,7 +9,7 @@ import org.neptune.cosmetics.utilities.commands.CommandArgs;
 
 public class CosmeticsCommand extends BaseCommand {
 
-    @Command(name = "Cosmetics", permission = "cosmetics.admin", aliases = {"cmc", "cosm"}, inGameOnly = false)
+    @Command(name = "Cosmetics", permission = "cosmetics.player", aliases = {"cmc", "cosm"}, inGameOnly = false)
     @Override
     public void onCommand(CommandArgs command) {
         Player player = command.getPlayer();

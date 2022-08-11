@@ -1,11 +1,11 @@
 # Cosmetics
 ### **To DO** 🌟
 
-- [ ] Database Storage.
-- [ ] BaseCommands.
+- [x] Database Storage(YML, SOON MONGODB.).
+- [x] BaseCommands.
 - [ ] Wing Effect.
 - [ ] Bow Trails.
-- [ ] Player Trails.
+- [x] Player Trails.
 - [ ] Kill Effects. 
 
 __*(This will be change in the time)*__

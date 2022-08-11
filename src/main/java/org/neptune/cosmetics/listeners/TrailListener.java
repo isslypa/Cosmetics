@@ -123,7 +123,7 @@ public class TrailListener implements Listener {
             for (TrailType type : types) {
                if (type.getItem(player).isSimilar(stack)) {
                   PlayerData data = new PlayerData(player.getUniqueId());
-                  if (player.hasPermission("strong.cosmetics.trail." + type.getName().toLowerCase()) && player.hasPermission("strong.cosmetics.trail.*")) {
+                  if (player.hasPermission("cosmetics.trail." + type.getName().toLowerCase()) && player.hasPermission("cosmetics.trail.*")) {
                      if (type.getName().equals(data.getTrail())) {
                         player.playSound(player.getLocation(), Sound.VILLAGER_NO, 1.0F, 1.0F);
                         player.sendMessage(CC.set("&cThis trail is already equipped."));

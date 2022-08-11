@@ -37,6 +37,7 @@ public enum TrailType {
    }
 
    private static final FileHandler config = Cosmetics.getInstance().getConfig();
+   private static final FileHandler lang = Cosmetics.getInstance().getLang();
    public String getDisplayName() {
       return CC.set(this.displayName);
    }
@@ -55,8 +56,8 @@ public enum TrailType {
       creator.setDurability(this.getData());
       creator.setName(this.getDisplayName() + " Trail");
       creator.setLore(Arrays.asList("", "&aClick to equip this trail."));
-      if (!player.hasPermission("strong.cosmetics.trail." + this.getName().toLowerCase())) {
-         creator.setLore(Arrays.asList("", "&cYou don't have permission to this trail.", "&cPurchase at " + config.getString("STORE")));
+      if (!player.hasPermission("cosmetics.trail." + this.getName().toLowerCase())) {
+         creator.setLore(Arrays.asList("", "&cYou don't have permission to this trail.", "&cPurchase at " + lang.getString("STORE")));
       }
 
       if (this.getName().equals(data.getTrail())) {

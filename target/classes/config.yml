@@ -1,8 +1,0 @@
-# MENUS
-FILL-MENUS: true
-FILL-ITEM:
-  NAME: "&7 "
-  MATERIAL: "STAINED_GLASS_PANE"
-  DATA: 0
-# STRINGS
-STORE: "store.aplaxy.net"

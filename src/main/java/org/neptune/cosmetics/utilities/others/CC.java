@@ -27,7 +27,7 @@ public class CC {
     }
 
     public static List<String> lore(List<String> input) {
-        return (List)input.stream().map(CC::set).collect(Collectors.toList());
+        return input.stream().map(CC::set).collect(Collectors.toList());
     }
 
     public static String set(String input) {

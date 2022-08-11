@@ -36,7 +36,7 @@ public enum TrailType {
       return this.name;
    }
 
-   private static FileHandler config = Cosmetics.getInstance().getConfig();
+   private static final FileHandler config = Cosmetics.getInstance().getConfig();
    public String getDisplayName() {
       return CC.set(this.displayName);
    }

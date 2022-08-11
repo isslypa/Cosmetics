@@ -11,3 +11,16 @@ COSMETICS:
     SLOT: 14
     LORE:
       - "&7&oSelect your favorite trail."
+
+    BUTTON:
+      ITEM:
+        GLOW: false
+        MATERIAL: "BLAZE_ROD"
+        DATA: 0
+      NAME: "&d&lRemove Trail"
+      LORE:
+        - ""
+        - "&dActive Trail(s)&7: &r%ACTIVE_TRAILS%"
+        - ""
+        - "&7Click to remove your currently trail."
+        - ""

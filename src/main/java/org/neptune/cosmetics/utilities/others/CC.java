@@ -26,6 +26,13 @@ public class CC {
         return list.stream().map(CC::translate).collect(Collectors.toList());
     }
 
+    public static List<String> lore(List<String> input) {
+        return (List)input.stream().map(CC::set).collect(Collectors.toList());
+    }
+
+    public static String set(String input) {
+        return ChatColor.translateAlternateColorCodes('&', input);
+    }
     public String strip(String text) {
         return ChatColor.stripColor(text);
     }

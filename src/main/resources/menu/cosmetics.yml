@@ -1,0 +1,13 @@
+# INVENTORY CONFIGURATION
+COSMETICS:
+  TITLE: "Cosmetics"
+  SIZE: 3
+  TRAIL:
+    NAME: "&cTrails"
+    ITEM:
+      GLOW: false
+      MATERIAL: "FIREWORK"
+      DATA: 0
+    SLOT: 14
+    LORE:
+      - "&7&oSelect your favorite trail."

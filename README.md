@@ -7,5 +7,6 @@
 - [ ] Bow Trails.
 - [x] Player Trails.
 - [ ] Kill Effects. 
+- [x] Tested.
 
 __*(This will be change in the time)*__

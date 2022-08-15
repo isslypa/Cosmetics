@@ -15,9 +15,8 @@ public class TrailButton {
    public static ItemStack getRemove(Player player) {
       PlayerData data = new PlayerData(player.getUniqueId());
       List<String> list = new ArrayList<>();
-      for (String text : menu.getStringList("COSMETICS.TRAIL.BUTTON.LORE"))
-      {
-         text.replace("%ACTIVE_TRAILS%", (data.getTrail() == null ? "None" : data.getTrail()));
+      for (String text : menu.getStringList("COSMETICS.TRAIL.BUTTON.LORE")) {
+         text = text.replace("%ACTIVE_TRAILS%", (data.getTrail() == null ? "None" : data.getTrail()));
          list.add(text);
       }
 

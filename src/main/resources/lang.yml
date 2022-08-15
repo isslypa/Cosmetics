@@ -1,3 +1,9 @@
 ONLY_CONSOLE: "&cOnly Console can execute this command."
 NO_PERMISSION: "&cYou don't have perms to perform this action."
 STORE: "store.aplaxy.net"
+TRAIL:
+  NOT_EQUIPED: "&cYou don't have any trail equipped."
+  REMOVED: "&aYour trail has been remove."
+  ALREADY_EQUIPED: "&cThis trail is already equipped."
+  SUCCESSFULL_EQUIPED: "&aSuccessfully equipped"
+  NO_PERMISSION: "&cYou don't have permissions to this trail."

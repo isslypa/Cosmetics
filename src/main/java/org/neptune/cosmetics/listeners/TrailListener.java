@@ -10,14 +10,17 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.event.player.PlayerMoveEvent;
 import org.bukkit.inventory.ItemStack;
+import org.neptune.cosmetics.Cosmetics;
 import org.neptune.cosmetics.cosmetics.TrailType;
 import org.neptune.cosmetics.managers.ItemStackManager;
 import org.neptune.cosmetics.managers.cosmetic.CosmeticMenu;
 import org.neptune.cosmetics.managers.data.PlayerData;
 import org.neptune.cosmetics.managers.trail.buttons.TrailButton;
+import org.neptune.cosmetics.utilities.file.FileHandler;
 import org.neptune.cosmetics.utilities.others.CC;
 
 public class TrailListener implements Listener {
+   private static final FileHandler lang = Cosmetics.getInstance().getLang();
    @EventHandler
    private void onPlayerMove(PlayerMoveEvent event) {
       Player player = event.getPlayer();
@@ -101,14 +104,14 @@ public class TrailListener implements Listener {
                PlayerData data = new PlayerData(player.getUniqueId());
                if (data.getTrail() == null) {
                   player.playSound(player.getLocation(), Sound.VILLAGER_NO, 1.0F, 1.0F);
-                  player.sendMessage(CC.set("&cYou don't have any trail equipped."));
+                  player.sendMessage(CC.translate(lang.getString("TRAIL.NOT_EQUIPED")));
                   return;
                }
 
                data.setTrail(null);
                player.playSound(player.getLocation(), Sound.CLICK, 1.0F, 1.0F);
                player.closeInventory();
-               player.sendMessage(CC.set("&aYour trail has been remove."));
+               player.sendMessage(CC.translate(lang.getString("TRAIL.REMOVED")));
                return;
             }
 
@@ -126,19 +129,19 @@ public class TrailListener implements Listener {
                   if (player.hasPermission("cosmetics.trail." + type.getName().toLowerCase()) && player.hasPermission("cosmetics.trail.*")) {
                      if (type.getName().equals(data.getTrail())) {
                         player.playSound(player.getLocation(), Sound.VILLAGER_NO, 1.0F, 1.0F);
-                        player.sendMessage(CC.set("&cThis trail is already equipped."));
+                        player.sendMessage(CC.translate(lang.getString("TRAIL.ALREADY_EQUIPED")));
                         return;
                      }
 
                      data.setTrail(type.getName());
                      player.playSound(player.getLocation(), Sound.ORB_PICKUP, 1.0F, 1.0F);
                      player.closeInventory();
-                     player.sendMessage(CC.set("&aSuccessfully equipped " + type.getDisplayName() + "&a."));
+                     player.sendMessage(CC.translate(lang.getString("TRAIL.SUCCESSFULL_EQUIPED" + type.getDisplayName() + "&a.")));
                      return;
                   }
 
                   player.playSound(player.getLocation(), Sound.VILLAGER_NO, 1.0F, 1.0F);
-                  player.sendMessage(CC.set("&cYou don't have permissions to this trail."));
+                  player.sendMessage(CC.translate(lang.getString("TRAIL.NO_PERMISSION")));
                   return;
                }
             }
